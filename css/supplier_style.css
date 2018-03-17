@@ -1,0 +1,23 @@
+.supplier td { padding: 10px; border: 1px solid;}
+h4 { font-family:     font-size: 100%;
+    background: #abc6dde0;
+    font-family: 'Open Sans', sans-serif;  padding-bottom: 10px; margin-top: 20px;}
+
+.button {    font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3498db; border:none; 
+  padding: 10px 20px 10px 20px;
+  text-decoration: none !important;}
+
+.button:hover {background: #3cb0fd;
+  text-decoration: none;}
+
+td.left { width: 200px;}
+td.right { width: 500px; }
+
+.w3l_logo {  float:none; margin-left:0; text-align: center;}
+body
+{
+background:#e7e7e7;
+}
