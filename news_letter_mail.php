@@ -13,11 +13,10 @@ require './mail_connection.php';
 		$_SESSION['newsletter_message']=$newsletter_message;
                 if(isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])){
                     header('Location: '.$_SERVER['HTTP_REFERER']);
-                }else{
-                    header('Location: /');
-                }
-        
+                }       
 }
+
+header('Location: index.php');
 
 function send_mail($row) {
     $mail_connection = new MailConnection();

@@ -6,6 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <?php
+session_start();
 if(isset($_REQUEST['message'])){
 $to      = 'advaita2012@gmail.com';
 $subject = "Enquiry by ".$_REQUEST['Name'];
@@ -171,30 +172,10 @@ mail($to, $subject, $message);
 	<!-- header modal -->
 	<!-- header -->
 	<div class="header" id="home1">
-		<div class="container">
-			<div class="w3l_login">
-				<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-			</div>
+		<div class="container"> 
 			<div class="w3l_logo">
 				<h1><a href="index.php">Electronic Store<span>Your stores. Your place.</span></a></h1>
-			</div>
-			<div class="search">
-				<input class="search_box" type="checkbox" id="search_box">
-				<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
-				<div class="search_form">
-					<form action="#" method="post">
-						<input type="text" name="Search" placeholder="Search...">
-						<input type="submit" value="Send">
-					</form>
-				</div>
-			</div>
-			<div class="cart cart box_1"> 
-				<form action="#" method="post" class="last"> 
-					<input type="hidden" name="cmd" value="_cart" />
-					<input type="hidden" name="display" value="1" />
-					<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-				</form>   
-			</div>  
+			</div> 
 		</div>
 	</div>
 	<!-- //header -->
@@ -302,9 +283,18 @@ Bandra West.
 						<li><a href="mailto:advaita2012@gmail.com">advaita@gmail.com</a></li>
 					</ul>
 				</div>
-				<div class="col-md-7 contact-left">
-					<h4>Contact Form</h4>
-					<form action="mail.php" method="post">
+				<div class="col-md-7 contact-left" id="contactform">
+                                    <?php 
+                                    $contact_scroll=false;
+                                    if(isset($_SESSION['contact_message']) && !empty($_SESSION['contact_message'])){
+                                        $contact_scroll=true;
+                                        echo '<div class="text-info text-center">'.$_SESSION['contact_message'].'</div><br>';
+                                        unset($_SESSION['contact_message']);
+                                    }
+                                    ?>
+                                    
+                                    <h4>Contact Form</h4>
+					<form action="contact_mail.php" method="post">
 						<input type="text" name="Name" placeholder="Your Name" required="">
 						<input type="email" name="Email" placeholder="Your Email" required="">
 						<input type="text" name="Telephone" placeholder="Telephone No" required="">
@@ -316,7 +306,7 @@ Bandra West.
 			</div>
 
 			<div class="contact-bottom">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d96908.54934770924!2d-73.74913540000001!3d40.62123259999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sanimal+rescue+service+near+Inwood%2C+New+York%2C+NY%2C+United+States!5e0!3m2!1sen!2sin!4v1436335928062" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<iframe src="https://www.google.com/maps/embed/v1/place?q=bandra+west,Mumbai,IN&key=AIzaSyB-zKUQ3oke_PcWnqqY14I_NEf3jrCylvo" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
@@ -413,7 +403,13 @@ Bandra West.
         scrollTop: $('#newsletter').offset().top
     }, 'slow');
 	</script>
-	<?php } ?>
+        <?php }else if($contact_scroll){ ?>
+            <script type="text/javascript">
+	$('html, body').animate({
+        scrollTop: $('#contactform').offset().top
+    }, 'slow');
+	</script>
+       <?php } ?>
 	<!-- cart-js -->
 	<script src="js/minicart.js"></script>
 	<script>
