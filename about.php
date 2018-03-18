@@ -341,19 +341,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!-- //team-bottom -->
 	<!-- newsletter -->
-	<div class="newsletter">
+	<div class="newsletter" id="newsletter">
 		<div class="container">
 			<div class="col-md-6 w3agile_newsletter_left">
 				<h3>Newsletter</h3>
-				<p>Excepteur sint occaecat cupidatat non proident, sunt.</p>
+				<p>Keep yourself updated about our offers!!!</p>
 			</div>
 			<div class="col-md-6 w3agile_newsletter_right">
-				<form action="#" method="post">
+				<form action="news_letter_mail.php" method="post">
 					<input type="email" name="Email" placeholder="Email" required="">
 					<input type="submit" value="" />
 				</form>
 			</div>
 			<div class="clearfix"> </div>
+                        <?php 
+			
+			$scroll=false;
+			if(isset($_SESSION['newsletter_message'])){
+                            echo '<p class="text-center" style="color: #f2dede;">'.(isset($_SESSION['newsletter_message'])?$_SESSION['newsletter_message']:'').'</p>';
+			    $scroll=true;
+			    unset($_SESSION['newsletter_message']);
+			}
+			?>
 		</div>
 	</div>
 	<!-- //newsletter -->
@@ -418,6 +427,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!-- //footer -->  
 	<!-- cart-js -->
+        	<?php if($scroll){ ?>
+	<script type="text/javascript">
+	$('html, body').animate({
+        scrollTop: $('#newsletter').offset().top
+    }, 'slow');
+	</script>
+	<?php } ?>
 	<script src="js/minicart.js"></script>
 	<script>
         w3ls.render();

@@ -3,7 +3,7 @@
 session_start();
 $newsletter_message='';
 if(isset($_POST['Email']) && !empty($_POST['Email'])){
-
+    
 require './mail_connection.php';
         if(send_mail(array('email' => $_POST['Email']))){
 			$newsletter_message='Subscribed to email successfully';
@@ -11,7 +11,12 @@ require './mail_connection.php';
 			$newsletter_message='Unable to subscribe';
 		}
 		$_SESSION['newsletter_message']=$newsletter_message;
-header(''Location: http://localhost/web/laptop.php');
+                if(isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])){
+                    header('Location: '.$_SERVER['HTTP_REFERER']);
+                }else{
+                    header('Location: /');
+                }
+        
 }
 
 function send_mail($row) {
