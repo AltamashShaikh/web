@@ -385,7 +385,7 @@ $con=connect('finalerp');
 						</div>
 					</div>
 				</div>-->
-				<div class="col-md-8 w3ls_mobiles_grid_right">
+				<div class="col-md-12 w3ls_mobiles_grid_right">
 					<div class="col-md-6 w3ls_mobiles_grid_right_left">
 						<div class="w3ls_mobiles_grid_right_grid1">
 							<img src="images/l0030.jpeg" alt=" " class="img-responsive" />
@@ -431,7 +431,11 @@ $con=connect('finalerp');
 								$pd=$row['pdescp'];
 								$pimage=$row['pimage'];
 								$pcost=$row['pcost'];
-								$pcat=$row['pcategory']; ?>
+								$pcat=$row['pcategory']; 
+                                                                if($i%3==0){
+                                                                    echo '<div class="row">';
+                                                                }
+                                                                ?>
 									<div class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_mobiles" style="padding-bottom: 5%">
 										<div class="agile_ecommerce_tab_left mobiles_grid">
 											<div class="hs-wrapper hs-wrapper2">
@@ -465,7 +469,12 @@ $con=connect('finalerp');
 										</div>
 									</div>
 									
-							<?php }
+							<?php 
+                                                        
+                                                        if($i%3==0){
+                                                                    echo '</div>';
+                                                                }
+                                                                }
 						?>
 					
 						<div class="clearfix"> </div>

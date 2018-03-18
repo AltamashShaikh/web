@@ -208,7 +208,7 @@ $con=connect('finalerp');
 				</div> 
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav">
-						<li><a href="index.php">Home</a></li>	
+						<li><a href="index.php" class="act">Home</a></li>	
 						<!-- Mega Menu -->
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -248,14 +248,18 @@ $con=connect('finalerp');
 								</div>
 							</ul>
 						</li>
-						<li><a href="about.html">About Us</a></li> 
-						<li class="w3pages"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+						<li><a href="about.php">About Us</a></li> 
+						<li class="w3pages"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">History <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="icons.html">Web Icons</a></li>
-								<li><a href="codes.html">Short Codes</a></li>     
+								<li><a href="pfc.php">Purchase</a></li>
+								<li><a href="pfc.php">Feedback</a></li>
+								<li><a href="pfc.php">Complaint</a></li>     
 							</ul>
 						</li>  
 						<li><a href="mail.php">Mail Us</a></li>
+						<?php if(isset($_SESSION['user'])){  ?>
+						<li><a href="signup.php?logout">Logout</a></li>
+						<?php }?>
 					</ul>
 				</div>
 			</nav>
@@ -366,7 +370,7 @@ $con=connect('finalerp');
 						</div>
 					</div>
 				</div>-->
-				<div class="col-md-8 w3ls_mobiles_grid_right">
+				<div class="col-md-12 w3ls_mobiles_grid_right">
 					<div class="col-md-6 w3ls_mobiles_grid_right_left">
 						<div class="w3ls_mobiles_grid_right_grid1">
 							<img src="images/50.jpg" alt=" " class="img-responsive" />
@@ -411,7 +415,11 @@ $con=connect('finalerp');
 								$pd=$row['pdescp'];
 								$pimage=$row['pimage'];
 								$pcost=$row['pcost'];
-								$pcat=$row['pcategory']; ?>
+								$pcat=$row['pcategory']; 
+                                                                if($i%3==0){
+                                                                    echo '<div class="row">';
+                                                                }
+                                                                ?>
 									<div class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_mobiles" style="padding-bottom: 5%">
 										<div class="agile_ecommerce_tab_left mobiles_grid">
 											<div class="hs-wrapper hs-wrapper2">
@@ -445,7 +453,11 @@ $con=connect('finalerp');
 										</div>
 									</div>
 									
-							<?php }
+							<?php 
+                                                        if($i%3==0){
+                                                                    echo '</div>';
+                                                                }
+                                                                }
 						?><div class="clearfix"> </div>
 					</div>
 				</div>
