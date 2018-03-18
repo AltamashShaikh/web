@@ -109,7 +109,7 @@ $email=$_SESSION['email'];
 		<div class="container">
 			
 			<div class="w3l_logo">
-				<h1><a href="index.html">Electronic Store<span>Your stores. Your place.</span></a></h1>
+				<h1><a href="index.php">Electronic Store<span>Your stores. Your place.</span></a></h1>
 			</div>
 			
 		</div>

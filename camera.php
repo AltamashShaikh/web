@@ -791,7 +791,7 @@ $con=connect('finalerp');
 				<div class="col-md-3 w3_footer_grid">
 					<h3>Profile</h3>
 					<ul class="info"> 
-						<li><a href="index.html">Home</a></li>
+						<li><a href="index.php">Home</a></li>
 						<li><a href="products.html">Today's Deals</a></li>
 					</ul>
 					<h4>Follow Us</h4>
