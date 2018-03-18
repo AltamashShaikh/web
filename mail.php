@@ -66,9 +66,6 @@ mail($to, $subject, $message);
 <!-- //end-smooth-scrolling --> 
 	</head> 
 	<body>
-		<!-- for bootstrap working -->
-		<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-		<!-- //for bootstrap working -->
 		<!-- header modal -->
 		<div class="modal fade" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88"
 			aria-hidden="true">
