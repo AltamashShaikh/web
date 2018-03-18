@@ -16,6 +16,7 @@ if (isset($_POST['Name']) && !empty($_POST['Name']) &&
     $_SESSION['contact_message'] = $contact_message;
     if (isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])) {
         header('Location: ' . $_SERVER['HTTP_REFERER']);
+        exit();
     }
 }
 
