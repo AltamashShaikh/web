@@ -172,9 +172,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div> 
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav">
-						<li><a href="index.php">Home</a></li>	
+						<li><a href="index.php" class="act">Home</a></li>	
 						<!-- Mega Menu -->
-			<li class="dropdown">
+						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
@@ -215,12 +215,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a href="about.php">About Us</a></li> 
 						<li class="w3pages"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">History <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="icons.html">Feedback</a></li>
-								<li><a href="codes.html">Complaint</a></li>     
+								<li><a href="pfc.php">Purchase</a></li>
+								<li><a href="pfc.php">Feedback</a></li>
+								<li><a href="pfc.php">Complaint</a></li>     
 							</ul>
 						</li>  
 						<li><a href="mail.php">Mail Us</a></li>
-						<li><a href="index.php">Logout</a></li>
+						<?php if(isset($_SESSION['user'])){  ?>
+						<li><a href="signup.php?logout">Logout</a></li>
+						<?php }?>
 					</ul>
 				</div>
 			</nav>
