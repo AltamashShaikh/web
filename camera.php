@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <?php 
 session_start();
+$newsletter_message='';
 $sql="SELECT * FROM `products` WHERE `pcategory`='cameras' ORDER BY `id` DESC";
 
 function connect($dbname)
@@ -717,19 +718,28 @@ $con=connect('finalerp');
 	</div>-->
 	<!-- //Related Products -->
 	<!-- newsletter -->
-	<div class="newsletter">
+	<div class="newsletter" id="newsletter">
 		<div class="container">
 			<div class="col-md-6 w3agile_newsletter_left">
 				<h3>Newsletter</h3>
 				<p>Keep yourself updated about our offers!!!</p>
 			</div>
 			<div class="col-md-6 w3agile_newsletter_right">
-				<form action="#" method="post">
+				<form action="news_letter_mail.php" method="post">
 					<input type="email" name="Email" placeholder="Email" required="">
 					<input type="submit" value="" />
 				</form>
 			</div>
 			<div class="clearfix"> </div>
+                        <?php 
+			
+			$scroll=false;
+			if(isset($_SESSION['newsletter_message'])){
+                            echo '<p class="text-center" style="color: #f2dede;">'.(isset($_SESSION['newsletter_message'])?$_SESSION['newsletter_message']:'').'</p>';
+			    $scroll=true;
+			    unset($_SESSION['newsletter_message']);
+			}
+			?>
 		</div>
 	</div>
 	<!-- //newsletter -->
@@ -797,6 +807,13 @@ $con=connect('finalerp');
 		</div>
 	</div>
 	<!-- //footer -->  
+        	<?php if($scroll){ ?>
+	<script type="text/javascript">
+	$('html, body').animate({
+        scrollTop: $('#newsletter').offset().top
+    }, 'slow');
+	</script>
+	<?php } ?>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$("#flexiselDemo2").flexisel({
