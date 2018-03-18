@@ -5,11 +5,16 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 <title>Electronic Store: An Ecommerce Online Shopping Website</title>
 <!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=g1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Electronic Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 	SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -131,29 +136,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- header -->
 	<div class="header" id="home1">
 		<div class="container">
-			<div class="w3l_login">
-				<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-			</div>
+			
 			<div class="w3l_logo">
 				<h1><a href="index.php">Electronic Store<span>Your stores. Your place.</span></a></h1>
 			</div>
-			<div class="search">
-				<input class="search_box" type="checkbox" id="search_box">
-				<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
-				<div class="search_form">
-					<form action="#" method="post">
-						<input type="text" name="Search" placeholder="Search...">
-						<input type="submit" value="Send">
-					</form>
-				</div>
-			</div>
-			<div class="cart cart box_1"> 
-				<form action="#" method="post" class="last"> 
-					<input type="hidden" name="cmd" value="_cart" />
-					<input type="hidden" name="display" value="1" />
-					<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-				</form>   
-			</div>  
+			
 		</div>
 	</div>
 	<!-- //header -->
@@ -228,8 +215,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 			</nav>
 		</div>
-	</div>
-	<!-- //navigation -->
+	</div>	<!-- //navigation -->
 	<!-- banner -->
 	<div class="banner banner10">
 		<div class="container">

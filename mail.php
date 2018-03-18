@@ -18,6 +18,8 @@ mail($to, $subject, $message);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 <title>Electronic Store: An Ecommerce Online Shopping Website</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -297,7 +299,7 @@ Bandra West.
 					<form action="contact_mail.php" method="post">
 						<input type="text" name="Name" placeholder="Your Name" required="">
 						<input type="email" name="Email" placeholder="Your Email" required="">
-						<input type="text" name="Telephone" placeholder="Telephone No" required="">
+						<input type="number" name="Telephone" placeholder="Telephone No" required="">
 						<textarea name="message" placeholder="Message..." required=""></textarea>
 						<input type="submit" value="Submit" >
 					</form>

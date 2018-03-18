@@ -29,6 +29,8 @@ $con=connect('finalerp');
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 <title>Electronic Store: An Ecommerce Online Shopping Website</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,8 +65,8 @@ $con=connect('finalerp');
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
-		$('.sbmincart-submit').click(function(e){
-			e.preventDefault();
+		$('body').on('click','.sbmincart-submit',function(e){
+			//e.preventDefault();
 			<?php if(!isset($_SESSION['user'])){  ?>
 				alert('Please login before proceeding for checkout');
 			<?php }else{ ?>

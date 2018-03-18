@@ -270,6 +270,7 @@ $prod=$_REQUEST['prod1'];
 		//$hist = implode(",", $his);
 		//print_r($hist);
 		$sql="INSERT INTO `feedback`(`fno`, `date`, `feedback`, `email`, `pid`, `feedbacktype`, `flag`) VALUES ('','$date','$feedback','$email','$pid','$prod','1')";
+		
 	mysql_query($sql,$con);
 	header("Location:pfc.php");
 
