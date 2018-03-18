@@ -786,19 +786,27 @@ $con=connect('finalerp');
 	</div>
 	<!-- //top-brands --> 
 	<!-- newsletter -->
-	<div class="newsletter">
+	<div class="newsletter" id="newsletter">
 		<div class="container">
 			<div class="col-md-6 w3agile_newsletter_left">
 				<h3>Newsletter</h3>
 				<p>Keep yourself updated about our offers!!!</p>
 			</div>
 			<div class="col-md-6 w3agile_newsletter_right">
-				<form action="#" method="post">
+                            <form action="news_letter_mail.php" method="post">
 					<input type="email" name="Email" placeholder="Email" required="">
 					<input type="submit" value="" />
 				</form>
 			</div>
 			<div class="clearfix"> </div>
+			<?php echo '<p class="text-center" style="color: #f2dede;">'.(isset($_SESSION['newsletter_message'])?$_SESSION['newsletter_message']:'').'</p>';
+			
+			$scroll=false;
+			if(isset($_SESSION['newsletter_message'])){
+			$scroll=true;
+				unset($_SESSION['newsletter_message']);
+			}
+			?>
 		</div>
 	</div>
 	<!-- //newsletter -->
@@ -862,6 +870,13 @@ $con=connect('finalerp');
 		</div>
 	</div>
 	<!-- //footer --> 
+        <?php if($scroll){ ?>
+	<script type="text/javascript">
+	$('html, body').animate({
+        scrollTop: $('#newsletter').offset().top
+    }, 'slow');
+	</script>
+	<?php } ?>
 	<!-- cart-js -->
 	<script src="js/minicart.js"></script>
 	<script>
