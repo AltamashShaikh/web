@@ -397,11 +397,11 @@ $con=connect('finalerp');
 													<p><i class="item_price">Rs.<?php echo $pcost ?></i></p>
 													<?php //<form action="#" method="post"> ?>
 														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="<?php echo $pid;?>" /> 
+                                                                                                                <input type="hidden" class="pid"  name="add" value="<?php echo $pid;?>" /> 
 														<input type="hidden" name="w3ls_item" value="<?php echo $pname;?>" /> 
 														<input type="hidden" name="amount" value="<?php echo $pcost;?>"/>   
-														<button id="feedbackbutton" onclick="feedback(this.id)" id="<?php echo $pid;?>" >Want to submit Feedback?</button>
-														<button id="complaintbutton" onclick="complaint(this.id)" id="<?php echo $pid;?>" >Want to raise Complaint?</button>
+														<button id="feedbackbutton" onclick="feedback(this.id,'<?php echo $pid;?>')" id="<?php echo $pid;?>" >Want to submit Feedback?</button>
+														<button id="complaintbutton" onclick="complaint(this.id,'<?php echo $pid;?>')" id="<?php echo $pid;?>" >Want to raise Complaint?</button>
 													<?php //</form> ?>
 												</div>
 											</div>
@@ -619,21 +619,21 @@ function buyalljs()
 	}
 }
 
-function complaint(abc)
+function complaint(abc,pid)
 {
 var add=prompt("ENTER COMPLAINT HERE :");
 if ( (add !== "") && (add !== null) ) {
-window.location='products.php?complaint='+add+'&prod1='+abc;
+window.location='products.php?complaint='+add+'&prod1='+abc+'&pid='+pid;
   }
 
 }
 
-function feedback(abc)
+function feedback(abc,pid)
 {
 var add=prompt("ENTER FEEDBACK HERE :");
 if ( (add !== "") && (add !== null) ) {
-window.location='products.php?feedback='+add+'&prod1='+abc;
-window.location='products.php?feedback='+add+'&prod1='+abc;
+window.location='products.php?feedback='+add+'&prod1='+abc+'&pid='+pid;
+window.location='products.php?feedback='+add+'&prod1='+abc+'&pid='+pid;
   }
 }
 

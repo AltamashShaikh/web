@@ -248,7 +248,8 @@ $prod=$_REQUEST['prod1'];
 		$custname=$row['custname'];
 		$tokennumber=date('d-m-y-s');
 		$tokennumber=$prod."-".$tokennumber;
-$sqlcrm="INSERT INTO `complaint`(`serviceid`, `pid`, `custid`, `custname`, `email`, `complaint`, `tokennumber`, `servicedate`, `servicetime`, `submitproduct`, `warranty`, `servicestatus`, `servicecompletedate`, `servicebill`, `flag`) VALUES ('','$prod','$id','$custname','$email','$complaint','$tokennumber','$sd','$st','no','yes','new',0,0,1)";
+                $pid=$_GET['pid'];
+$sqlcrm="INSERT INTO `complaint`(`serviceid`, `pid`, `custid`, `custname`, `email`, `complaint`, `tokennumber`, `servicedate`, `servicetime`, `submitproduct`, `warranty`, `servicestatus`, `servicecompletedate`, `servicebill`, `flag`) VALUES ('','$pid','$id','$custname','$email','$complaint','$tokennumber','$sd','$st','no','yes','new',0,0,1)";
 
 	mysql_query($sqlcrm,$con);
 	header("Location:pfc.php");
@@ -264,10 +265,11 @@ $prod=$_REQUEST['prod1'];
 		mysql_select_db('finalerp',$con);
 		$email=$_SESSION['email'];
 		$date=date('d-m-y');
+                $pid=$_GET['pid'];
 		//$his=$_SESSION['pcartid'];
 		//$hist = implode(",", $his);
 		//print_r($hist);
-		$sql="INSERT INTO `feedback`(`fno`, `date`, `feedback`, `email`, `pid`, `feedbacktype`, `flag`) VALUES ('','$date','$feedback','$email','$prod','','1')";
+		$sql="INSERT INTO `feedback`(`fno`, `date`, `feedback`, `email`, `pid`, `feedbacktype`, `flag`) VALUES ('','$date','$feedback','$email','$pid','$prod','1')";
 	mysql_query($sql,$con);
 	header("Location:pfc.php");
 
