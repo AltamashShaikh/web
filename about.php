@@ -68,7 +68,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<div class="facts">
 											<div class="register">
 												<form action="#" method="post">			
-													<input name="Email" placeholder="User Name" type="text" required="">						
+													<input name="Email" placeholder="User Namelaura
+													" type="text" required="">						
 													<input name="Password" placeholder="Password" type="password" required="">										
 													<div class="sign-up">
 														<input type="submit" value="Sign in"/>
@@ -265,7 +266,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="clearfix"> </div>
 				</div>
 				<div class="col-md-6 w3ls_about_grid_right">
-					<img src="images/52.jpg" alt=" " class="img-responsive" />
+					<img src="images/DSC_0079.jpg" alt=" " class="img-responsive" />
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -278,7 +279,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h3>Meet Our Team</h3>
 			<div class="wthree_team_grids">
 				<div class="col-md-3 wthree_team_grid">
-					<img src="images/t4.png" alt=" " class="img-responsive" />
+					<img src="images/IMG20180219141341.jpg" alt=" " class="img-responsive" />
 					<h4>Smith Allen <span>Manager</span></h4>
 					<div class="agileits_social_button">
 						<ul>
@@ -290,7 +291,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 				<div class="col-md-3 wthree_team_grid">
-					<img src="images/t5.png" alt=" " class="img-responsive" />
+					<img src="images/IMG_20141018_174010.jpg" alt=" " class="img-responsive" />
 					<h4>Laura James <span>Designer</span></h4>
 					<div class="agileits_social_button">
 						<ul>
@@ -302,7 +303,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 				<div class="col-md-3 wthree_team_grid">
-					<img src="images/t6.png" alt=" " class="img-responsive" />
+					<img src="images/IMG20171018211350.jpg" alt=" " class="img-responsive" />
 					<h4>Crisp Doe <span>Director</span></h4>
 					<div class="agileits_social_button">
 						<ul>
@@ -314,7 +315,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 				<div class="col-md-3 wthree_team_grid">
-					<img src="images/t7.png" alt=" " class="img-responsive" />
+					<img src="images/IMG20170930113137.jpg" alt=" " class="img-responsive" />
 					<h4>Linda Rosy <span>Quality Checker</span></h4>
 					<div class="agileits_social_button">
 						<ul>

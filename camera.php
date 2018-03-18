@@ -28,7 +28,7 @@ $con=connect('finalerp');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Electronic Store a Ecommerce Online Shopping Category Bootstrap Responsive Website Template | Products2 :: w3layouts</title>
+<title>Electronic Store: An Ecommerce Online Shopping Website</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -84,7 +84,7 @@ $con=connect('finalerp');
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 						&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Don't Wait, Login now!</h4>
+					<h4 class="modal-title" id="myModalLabel">">What Are You Waiting For??, Login now!!</</h4>
 				</div>
 				<div class="modal-body modal-body-sub">
 					<div class="row">
@@ -170,7 +170,7 @@ $con=connect('finalerp');
 				<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
 			</div>-->
 			<div class="w3l_logo">
-				<h1><a href="index.html">Electronic Store<span>Your stores. Your place.</span></a></h1>
+				<h1><a href="camera.php">Electronic Store<span>Your stores. Your place.</span></a></h1>
 			</div>
 			<!--<div class="search">
 				<input class="search_box" type="checkbox" id="search_box">
@@ -207,7 +207,7 @@ $con=connect('finalerp');
 				</div> 
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>	
+						<li><a href="index.php">Home</a></li>	
 						<!-- Mega Menu -->
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -254,7 +254,7 @@ $con=connect('finalerp');
 								<li><a href="codes.html">Short Codes</a></li>     
 							</ul>
 						</li>  
-						<li><a href="mail.html">Mail Us</a></li>
+						<li><a href="mail.php">Mail Us</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -264,14 +264,14 @@ $con=connect('finalerp');
 	<!-- banner -->
 	<div class="banner banner3">
 		<div class="container">
-			<h2>Deals on Large <span>Appliances</span> Flat <i>25% Discount</i></h2> 
+			<h2>Special Deals on<span>CANON Products</span> Flat <i>25% Discount</i></h2> 
 		</div>
 	</div> 
 	<!-- breadcrumbs -->
 	<div class="breadcrumb_dress">
 		<div class="container">
 			<ul>
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
+				<li><a href="index.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
 				<li>Camera</li>
 			</ul>
 		</div>

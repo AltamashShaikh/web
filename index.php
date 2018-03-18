@@ -38,7 +38,7 @@ $con=connect('finalerp');
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/fasthover.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" /><link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
 <link href="css/font-awesome.css" rel="stylesheet"> 
@@ -618,7 +618,8 @@ $con=connect('finalerp');
 				</div>
 				<div class="col-md-5 w3agile_special_deals_grid_right">
 					<img src="images/hpspetre13.jpg" alt=" " class="img-responsive" />
-					<img src="images/hpspetre13.jpg" alt=" " class="img-responsive" />
+					
+					<img src="images/c0012.jpeg" alt=" " class="img-responsive" />
 					
 					<div class="w3agile_special_deals_grid_right_pos">
 						<h4>Special <span><span>Deal</span></span></h4>
@@ -789,7 +790,7 @@ $con=connect('finalerp');
 		<div class="container">
 			<div class="col-md-6 w3agile_newsletter_left">
 				<h3>Newsletter</h3>
-				<p>Excepteur sint occaecat cupidatat non proident, sunt.</p>
+				<p>Keep yourself updated about our offers!!!</p>
 			</div>
 			<div class="col-md-6 w3agile_newsletter_right">
 				<form action="#" method="post">
